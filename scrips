@@ -10,7 +10,7 @@ powershell making folders
 
  & "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --new-window --incognito https://google.com/
 
-cmd opening mulitple things
+cmd opening multiple things
  For %a in (%URL%) Do (Start chrome "-new-window -incognito %a")
  dir /AD /B /ON /S "C:\Users\adminP\Documents\pro 66"
 
@@ -37,3 +37,26 @@ Regex
 
 \\conditions before 1st tab
 ^(\w+\s?)?\d+\w(\s+|\s\-\w{3,6}|\-(\d|\w)?)+[^\t]+
+
+Method 3: List via Excel VBA author: Shirley Zhang from DataNumen
+Sub ListSheetNamesInNewWorkbook()
+    Dim objNewWorkbook As Workbook
+    Dim objNewWorksheet As Worksheet
+
+    Set objNewWorkbook = Excel.Application.Workbooks.Add
+    Set objNewWorksheet = objNewWorkbook.Sheets(1)
+
+    For i = 1 To ThisWorkbook.Sheets.Count
+        objNewWorksheet.Cells(i, 1) = i
+        objNewWorksheet.Cells(i, 2) = ThisWorkbook.Sheets(i).Name
+    Next i
+
+    With objNewWorksheet
+         .Rows(1).Insert
+         .Cells(1, 1) = "INDEX"
+         .Cells(1, 1).Font.Bold = True
+         .Cells(1, 2) = "NAME"
+         .Cells(1, 2).Font.Bold = True
+         .Columns("A:B").AutoFit
+    End With
+End Sub
