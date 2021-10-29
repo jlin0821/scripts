@@ -3,21 +3,16 @@ Sub Macro1()
     Range("B1").Cut Destination:=Range("A6")
     Range("A6").Select
     Range("B6").Select
-    Rows("6:6").Select
-    Range("B6").Activate
-    Range("B6").Select
-    Columns("B:B").Select
-    Range("B6").Activate
     Columns("B:B").Select
     Selection.Delete Shift:=xlToLeft
     Range("A7").Select
     Range(Selection, Selection.End(xlDown)).Select
     Selection.Cut
-    Range("D7").Select
+    Range("c7").Select
     Selection.Insert Shift:=xlToRight
     ActiveCell.Activate
     Range("C7").Select
-                                    Cells.Find(What:="input", After:=ActiveCell, LookIn:=xlFormulas2, LookAt _
+                        Cells.Find(What:="input", After:=ActiveCell, LookIn:=xlFormulas2, LookAt _
         :=xlPart, SearchOrder:=xlByRows, SearchDirection:=xlNext, MatchCase:= _
         False, SearchFormat:=False).Activate
             Rows(ActiveCell.Row).Select
@@ -26,7 +21,7 @@ Sub Macro1()
         :=xlPart, SearchOrder:=xlByRows, SearchDirection:=xlNext, MatchCase:= _
         False, SearchFormat:=False).Activate
             Rows(ActiveCell.Row).Select
-    Selection.ClearContents    
+    Selection.ClearContents
     Dim last_row, last_col As Long
 
     'Get last row
