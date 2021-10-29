@@ -17,7 +17,7 @@ Sub Macro1()
     Selection.Insert Shift:=xlToRight
     ActiveCell.Activate
     Range("C7").Select
-    Cells.Find(What:="mopro", After:=ActiveCell, LookIn:=xlFormulas2, LookAt _
+                                    Cells.Find(What:="input", After:=ActiveCell, LookIn:=xlFormulas2, LookAt _
         :=xlPart, SearchOrder:=xlByRows, SearchDirection:=xlNext, MatchCase:= _
         False, SearchFormat:=False).Activate
             Rows(ActiveCell.Row).Select
