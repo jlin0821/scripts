@@ -17,20 +17,25 @@ Sub Macro1()
     Selection.Insert Shift:=xlToRight
     ActiveCell.Activate
     Range("C7").Select
-                  Cells.Find(What:="test", After:=ActiveCell, LookIn:=xlFormulas2, LookAt _
+    Cells.Find(What:="mopro", After:=ActiveCell, LookIn:=xlFormulas2, LookAt _
         :=xlPart, SearchOrder:=xlByRows, SearchDirection:=xlNext, MatchCase:= _
         False, SearchFormat:=False).Activate
             Rows(ActiveCell.Row).Select
     Selection.ClearContents
-Dim last_row, last_col As Long
+                 Cells.Find(What:="ONLINE PAYMENT - THANK YOU", After:=ActiveCell, LookIn:=xlFormulas2, LookAt _
+        :=xlPart, SearchOrder:=xlByRows, SearchDirection:=xlNext, MatchCase:= _
+        False, SearchFormat:=False).Activate
+            Rows(ActiveCell.Row).Select
+    Selection.ClearContents    
+    Dim last_row, last_col As Long
 
-'Get last row
-last_row = Cells(Rows.Count, 3).End(xlUp).Row
+    'Get last row
+    last_row = Cells(Rows.Count, 3).End(xlUp).Row
 
-'Get last column
-last_col = Cells(6, Columns.Count).End(xlToLeft).Column
+    'Get last column
+    last_col = Cells(6, Columns.Count).End(xlToLeft).Column
 
-'Select entire table
-Range(Cells(6, 3), Cells(last_row, last_col)).Select
+    'Select entire table
+    Range(Cells(6, 3), Cells(last_row, last_col)).Select
     Selection.Copy
 End Sub
