@@ -1,3 +1,11 @@
+To make variable searching 
+:a
+setlocal enabledelayedexpansion 
+set list="google.com/search?q=" "youtube.com/results?search_query="
+set /p k=
+(for %%a in (%list%) do (echo %%a%k%)
+pause
+goto :a
 
 
 excel counting blank cells under
