@@ -1,9 +1,10 @@
 To make variable searching 
 :a
 setlocal enabledelayedexpansion 
-set list="google.com/search?q=" "youtube.com/results?search_query="
+set list[0]=google.com/search?q=
+set list[1]=youtube.com/results?search_query=
 set /p k=
-(for %%a in (%list%) do (echo %%a%k%)
+for /l %%a in (0,1,1) do (start chrome !list[%%a]!%k%)
 pause
 goto :a
 
