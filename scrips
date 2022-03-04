@@ -7,7 +7,7 @@ setlocal enabledelayedexpansion
 set list[0]=google.com/search?q=
 set list[1]=youtube.com/results?search_query=
 set /p k=
-for /l %%a in (0,1,1) do (start chrome !list[%%a]!%k%)
+for /l %%a in (0,1,1) do (start chrome "!list[%%a]!%k%")
 pause
 goto :a
 
