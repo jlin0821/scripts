@@ -1,6 +1,14 @@
 to make date time format powershell
 Get-Date -Format "M-d-yy" | set-clipboard
 
+
+(echo I have some questions for the hiring manager. Please forward them with an ETA of when they will respond.
+echo What is the software version used and is it currently integrated with other functions such as the bank, holding accounts, trust accounts, G/L and/or A/R? To rephrase it, if you put something in one system do you have to re-enter it again in another aside from the redundancies necessary for auditing?  Or are these N/A?
+echo Are you expecting any organizational change in the near future?
+echo How many different states/provinces will I be working with?
+echo How long ago did you update the job description, are there any updates and what is the timeline?) |clip
+
+
 To make variable searching 
 :a
 setlocal enabledelayedexpansion 
