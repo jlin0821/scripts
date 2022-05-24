@@ -83,4 +83,4 @@ End Sub
 
 name of files in network file
 dir /b "\\SFFS01\Financial Department\Fees and Losses\Files to be included in reimbursement request emails\2022\2022 - 04"
-
+dir /b /od downloads
